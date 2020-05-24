@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <title>Epitaque's Whiteboard</title>
+        <link rel="stylesheet" href="3rdParty/Pickr/themes/nano.min.css"/> <!-- 'nano' theme -->
+        <script src="3rdParty/Pickr/pickr.es5.min.js"></script>
+    </head>
+    <body>
+        <div id="overlay" onclick="hideOverlay()">
+            <div class="text">
+                <h1>Hey</h1>
+                <p>This is a collaborative whiteboard app. Anyone can draw anything, including hateful stuff, so leave if you're uncomfortable with that.</p>
+    
+                <p>I made this because I'm curious what people who see my discord status will draw. Click anywhere to hide this!</p>    
+            </div>
+        </div>
+        <div class="wrapper">
+            <canvas id="myCanvas" width="1200" height="1200"></canvas>
+            <div class="panels">
+                <div class="panel color">
+                    <h2>COLOR</h2>
+                    <div class="color-picker-wrapper">
+                        <div id="color-picker"> </div>
+                    </div>
+                </div>
+    
+                <div class="panel zoom">
+                    <h2>ZOOM</h2>
+                    <span>
+                        <a href="#" id="zoom-in">+</a>
+                        <a href="#" id="zoom-out">-</a>    
+                    </span>
+                </div>
+
+                <div class="panel pixels">
+                    <h2>PIXELS</h2>
+                    <div class="pixels-remaining-wrapper">
+                        <div id="pixel-remaining-count"> </div>
+                        <div id="pixel-remaining-msg">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel archive">
+                    <a href="/images">ARCHIVE</a>
+                    <a href="https://github.com/brianhoy/collaborative-whiteboard">GITHUB</a>
+                </div>
+            </div>
+        </div>
+
+        <script src="drawing.js"></script>
+    </body>
+</html>

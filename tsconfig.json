@@ -1,0 +1,23 @@
+{
+	// Some typical compiler options
+	"compilerOptions": {
+		"target": "es2020",
+		"moduleResolution": "node",
+		"outDir": "public",
+		"rootDir": "source"
+	},
+
+	"watchOptions": {
+		// Use native file system events for files and directories
+		"watchFile": "useFsEvents",
+		"watchDirectory": "useFsEvents",
+
+		// Poll files for updates more frequently
+		// when they're updated a lot.
+		"fallbackPolling": "dynamicPriority"
+	},
+
+	"include": ["source/*.ts"],
+	"exclude": ["node_modules", "**/*.spec.ts"]
+}
+  

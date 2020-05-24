@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #181818;
+    font-family: 'VT323', monospace;
+}
+
+canvas {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.wrapper {
+    position: relative;
+}
+
+.panels {
+    position: fixed;
+    top: 20px;
+}
+
+.panel {
+    background-color: rgb(10, 10, 10);
+    padding: 5px;
+    border: 5px solid rgb(58, 58, 58);
+    margin: 20px;
+    width: 100px;
+    height: 100px;
+    text-align:center;
+}
+
+.panel h2 {
+    font-size: 50px;
+    color: white;
+    margin: 0;
+    margin-top: -5px;
+}
+
+.panel.pixels h2 {
+    font-size: 40px;
+}
+
+.panel.zoom span a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 50px;
+    color: rgb(12, 146, 184);
+}
+
+.pcr-button {
+    width: 40px !important;
+    height: 40px !important;
+    margin-top: -5px;
+}
+
+#pixel-remaining-count {
+    font-size: 60px;
+    color: rgb(12, 146, 184);
+    margin-top: 2px;
+}
+
+.color-picker-wrapper {
+    margin-top: 10px;
+}
+
+.panel.archive {
+    color:white;
+    font-size: 30px;
+    height: 70px;
+}
+
+#overlay {
+    position: fixed; /* Sit on top of the page content */
+    display: block; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,1); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+}
+
+#overlay .text {
+    color: white;
+    position:absolute;
+    top:50%;
+    left:50%;
+    font-size:50px;
+    user-select:none;
+    transform:translate(-50%,-50%);
+    -ms-transform:translate(-50%,-50%)
+}
